@@ -65,7 +65,7 @@ export class AboutJade extends Component {
                     <span className=" ml-1 md:ml-2 text-gray-50 ">Projects</span>
                 </div>
                 <div className='my-0.5 w-28 md:w-full h-8 px-2 md:px-2.5 flex' >
-                    <iframe src="https://github.com/sponsors/vivek9patel/button" title="Sponsor vivek9patel" width={"100%"} height={"100%"} ></iframe>
+                    <iframe src="https://github.com/sponsors/vivek9patel/buttonhttps://www.paypal.com/donate/?business=N5QWG28WJSCVS&no_recurring=0&currency_code=USD" title="Donate <3" width={"100%"} height={"100%"} ></iframe>
                 </div>
             </>
         );
@@ -183,14 +183,25 @@ function Skills() {
 function Projects() {
     const project_list = [
         {
-            name: "❤ UbuntuOS Portfolio ❤",
-            date: "Apr 2021",
-            link: "https://github.com/vivek9patel/vivek9patel.github.io",
+            name: "Cloud",
+            date: "Apr 2022",
+            link: "https://github.com/theDevJade/Cloud",
             description: [
-                "Thanks to vivek for this amazing portfolio, original code is from them.",
+                "A modular addon system for other developers to add onto your projects!",
             ],
-            domains: ["javascript", "next.js", "tailwindcss"]
+            domains: ["java", "spigotmc"]
+        },
+        {
+            name: "Mercury",
+            date: "Apr 2022",
+            link: "https://github.com/theDevJade/Mercury",
+            description: [
+                "A powerful library that supplies utilities that you will use everyday.",
+            ],
+            domains: ["java", "kotlin", "spigotmc"]
         }
+        
+        
         
     ];
 
