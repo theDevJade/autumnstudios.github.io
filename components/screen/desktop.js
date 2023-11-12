@@ -12,7 +12,7 @@ import $ from 'jquery';
 export class Desktop extends Component {
     constructor() {
         super();
-        this.app_stack = [];
+        this.app_stack = ["about_jade"];
         this.initFavourite = {};
         this.allWindowClosed = false;
         this.state = {
@@ -35,8 +35,6 @@ export class Desktop extends Component {
     }
 
     componentDidMount() {
-        // google analytics
-        //ReactGA.send({ hitType: "pageview", page: "/desktop", title: "Custom Title" });
 
         this.fetchAppsData();
         this.setContextListeners();
