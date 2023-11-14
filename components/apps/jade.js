@@ -2,7 +2,84 @@ import React, { Component } from 'react';
 
 
 function Photography() {
-    return null;
+    const project_list = [
+        {
+            name: "Monarchs",
+            link: "https://github.com/theDevJade/Cloud",
+            photo: "monarch.jpeg",
+            domains: ["java", "spigotmc"]
+        },
+        {
+            name: "Delicate Flowers",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "flowers.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "Beautiful Pine",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "pine.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "The Bridge",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "bridge.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "My Dog",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "dog.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "Staircase of Mushrooms",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "mushroomstaircase.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "Donut Doug",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "dog2.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        },
+        {
+            name: "Flower of Gentle Blue",
+            link: "https://github.com/theDevJade/Mercury",
+            photo: "blueflowers.jpeg",
+            domains: ["java", "kotlin", "spigotmc"]
+        }
+
+
+
+    ];
+
+    return (
+        <>
+
+            {
+                project_list.map((project, index) => {
+                    const projectNameFromLink = project.link.split('/')
+                    const projectName = projectNameFromLink[projectNameFromLink.length - 1]
+                    return (
+                        <div className="w-full py-1 px-2 my-2 border border-gray-50 border-opacity-10 rounded hover:bg-gray-50 hover:bg-opacity-5 cursor-pointer">
+                            <div className="flex flex-wrap justify-between items-center">
+                                <div className='flex justify-center items-center'>
+                                    <div className=" text-base md:text-lg mr-2">{project.name}</div>
+                                </div>
+                            </div>
+                            <ul className=" tracking-normal leading-tight text-sm font-light ml-4 mt-1">
+                                <img width="40%" height="40%" src={"./images/photos/" + project.photo} alt="Jade" />
+                            </ul>
+                        </div>
+
+                    )
+                })
+            }
+        </>
+    )
 }
 
 export class AboutJade extends Component {
@@ -123,7 +200,7 @@ function About() {
                 <li className=" mt-3 list-building"> I enjoy building <span className=" font-medium">libraries</span> that make other developers lives easier.</li>
                 <li className=" mt-3 list-time"> When I am not coding my next project, I like to spend my time reading books, playing minecraft or watching <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"> music videos.</a></li>
                 <li className=" mt-3 list-star"> I also have interest in PC Building & Physics!</li>
-                <li className=" mt-3 list-star">On top of that, I'm an aspiring photographer!</li>
+                <li className=" mt-3 list-camera">On top of that, I'm an aspiring photographer!</li>
             </ul>
         </>
     )
